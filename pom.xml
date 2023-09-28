@@ -10,10 +10,10 @@
 		<relativePath />
 	</parent>
 	<groupId>cricket.predictor</groupId>
-	<artifactId>CricketPredictor</artifactId>
+	<artifactId>CricketWorldCupPredictor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>CricketPredictor</name>
+	<name>CricketWorldCupPredictor</name>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
