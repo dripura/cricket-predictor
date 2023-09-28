@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cricket World Cup Prediction - 2023</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/all-styles.css">
+	<link rel="stylesheet" href="/css/match.css">
+	<link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css">
+	<link rel="icon" href="/images/background-img-remove.png" type="image/x-icon">
+</head>
+
+<body>
+	<header>
+		<h1 class="h1-container">
+			<span class="img-container">
+				<span class="text">Cricket World Cup Prediction - 2023</span>
+				<span>
+					<img th:src="@{/images/background-img.png}" alt="Cricket Prediction">
+				</span>
+			</span>
+		</h1>
+	</header>
+	<h3>Match Details Form</h3>
+	<div class="container">
+		<div class="img-container">
+			<img th:src="@{/images/background-img-remove.png}" alt="Your Image" class="background-image">
+		</div>
+		<div class="form-container">
+			<form action="/insert-match" method="post">
+				<!-- Match Number -->
+				<div class="form-row">
+					<div class="form-label">
+						<label for="matchNumber">Match Number</label>
+					</div>
+					<select id="matchNumber" name="matchNumber" required>
+						<option value="">Select</option>
+						<th:block th:each="i : ${#numbers.sequence(1, 45)}">
+							<option th:value="${i}" th:text="${i}"></option>
+						</th:block>
+					</select>
+				</div>
+
+				<!-- Team 1 Name -->
+				<div class="form-row">
+					<div class="form-label">
+						<label for="team1Name">Team 1 Name</label>
+					</div>
+					<select id="team1Name" name="team1Name" required>
+						<option value="">Select</option>
+						<th:block th:each="team : ${teams}">
+							<option th:value="${team}" th:text="${team}"></option>
+						</th:block>
+					</select>
+				</div>
+
+				<!-- Team 2 Name -->
+				<div class="form-row">
+					<div class="form-label">
+						<label for="team2Name">Team 2 Name</label>
+					</div>
+					<select id="team2Name" name="team2Name" required>
+						<option value="">Select</option>
+						<th:block th:each="team : ${teams}">
+							<option th:value="${team}" th:text="${team}"></option>
+						</th:block>
+					</select>
+				</div>
+
+				<!-- Match Date -->
+				<div class="form-row">
+					<div class="form-label">
+						<label for="matchDate">Match Date</label>
+					</div>
+					<input type="date" id="matchDate" name="matchDate" min="2023-10-01" max="2024-01-01" required>
+				</div>
+
+				<div class="validation-container">					
+					
+					<div class="center-align">
+						<input type="submit" value="Submit">
+					</div>
+
+					<div th:if="${message}" class="validation-content alert alert-success">
+						<p th:text="${message}"></p>
+					</div>
+					<div th:if="${error}" class="validation-content alert alert-danger">
+						<p th:text="${error}"></p>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</body>
+
+</html>

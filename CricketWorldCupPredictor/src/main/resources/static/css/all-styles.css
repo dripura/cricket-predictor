@@ -1,0 +1,306 @@
+header {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+}
+
+nav {
+	background-color: #0077b6;
+	text-align: center;
+	padding: 10px 0;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+}
+
+nav a:hover {
+	border-bottom: 2px solid white;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 1000px !important;
+}
+
+h3 {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+label {
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+select,
+input[type="checkbox"],
+input[type="date"],
+input[type="text"],
+button {
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 15px 15px;
+	border: 5px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: green;
+}
+
+/* Center-align the button within its container */
+.center-align {
+	text-align: center;
+}
+
+span {
+	padding-right: 10px;
+}
+
+footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+footer img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.text {
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+/* Style the background image within the container */
+.background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 100px 100px 10px 10px !important;
+	width: 50% !important;
+	height: 100% !important;
+	z-index: -1;
+	background-image: url('/path-to-your-image.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.h1-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.img-container {
+	display: flex;
+	align-items: center;
+}
+
+.img-container img {
+	width: 60px;
+	height: 60px;
+	align-items: center;
+	max-width: 100%;
+	margin-right: 10px;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1px;
+	border: 2px solid #0077b6;
+	padding: 10px 10px 10px 10px;
+	border-radius: 5px;
+}
+
+.flex-col {
+	display: flex;
+	padding: 20px 20px 20px 20px;
+	flex-wrap: wrap;
+	flex-direction: row;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+.flex-col-noborder {
+	display: flex;
+	padding: 20px 20px 20px 20px;
+	flex-wrap: wrap;
+	flex-direction: row;
+	border: 0px solid grey;
+	border-radius: 5px;
+}
+
+.flex-col:nth-child(odd) {
+	flex-basis: calc(15% - 0px);
+	justify-content: center;
+}
+
+.flex-col:nth-child(even) {
+	flex-basis: calc(15% - 0px);
+	justify-content: center;
+}
+
+.flex-item-col {
+	display: flex;
+	flex: 1;
+	gap: 1px;
+	border: 0px solid grey;
+	padding: 0px 0px 0px 10px;
+	flex-direction: column;
+	justify-content: right;
+}
+
+.flex-item {
+	display: flex;
+	flex: 1;
+	flex-basis: calc(50% - 0px);
+	gap: 1px;
+	padding: 10px 10px 10px 10px;
+	border: 0px solid grey;
+	flex-direction: column;
+}
+
+.flex-item:nth-child(odd) {
+	flex-basis: calc(25% - 0px);
+	flex-direction: column;
+	border-radius: 5px;
+}
+
+.flex-item:nth-child(even) {
+	flex-basis: calc(25% - 0px);
+	flex-direction: column;
+	border-radius: 5px;
+}
+
+.primary-button {
+	background-color: #007bff;
+	color: white;
+	padding: 5px 5px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.primary-button:hover {
+	background-color: #0056b3;
+}
+
+.secondary-button {
+	background-color: #6c757d;
+	color: white;
+	padding: 5px 5px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.secondary-button:hover {
+	background-color: #495057;
+}
+
+.toggle-icon {
+	font-size: 20px;
+	width: 40px;
+	transition: transform 0.3s ease;
+}
+
+.toggle-off {
+	transform: translateX(-100%);
+}
+
+.validation-container {
+	overflow: hidden;
+	display: flex;
+	gap: 1;
+	justify-content: center;
+	align-items: start;
+	margin-bottom: 18px;
+}
+
+.validation-content {
+	text-align: center;
+	font-size: 12px;
+	display: flex;
+	margin-left: 10px;
+}
+
+input::placeholder,
+textarea::placeholder {
+	/* Apply your styles here */
+	color: red;
+	/* Change the text color */
+	font-style: italic;
+	/* Make it italic (optional) */
+	font-size: 12px;
+	/* Adjust the font size */
+}
+
+tr,
+td,
+option,
+date {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+select,
+input[type="checkbox"],
+input[type="date"],
+input[type="text"],
+button {
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	font-size: 14.5px;
+}
+
+.center {
+	text-align: center;
+}

@@ -1,0 +1,115 @@
+body {
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	margin: 5px;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.container1 {
+	display: flex;
+	margin: 10px 100px 100px 300px;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+
+/* Style the background image within the container */
+.background-image {
+	position: absolute;
+	left: 150px;
+	top: 60px;
+	width: 30% !important;
+	height: 60% !important;
+	z-index: -1;
+	background-color: #f9f9f9;
+}
+
+/* Style the background image within the container */
+.background-image1 {
+	position: absolute;
+	left: 400px;
+	top: 160px;
+	margin-top: 30px;
+	width: 30% !important;
+	height: 60% !important;
+	z-index: -1;
+}
+
+/* Style the form container */
+.form-container {
+	flex: 1;
+	padding: 20px;
+	z-index: 1;
+	max-width: 400px;
+	max-height: 400px;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	margin-top: 20px;
+	margin-left: 200px;
+}
+
+/* Style for form labels */
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+/* Style for form inputs and selects */
+input[type="text"],
+input[type="date"],
+select {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/* Style the date picker input */
+#matchDate {
+	width: 100%;
+	padding: 10px;
+}
+
+/* Display labels and dropdowns in a single line */
+.form-row {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Adjust other styles for your form elements as needed */
+.form-label {
+	width: 250px;
+	margin-right: 10px;
+}
+
+/* Adjust label text size to fit */
+.form-label label {
+	white-space: nowrap;
+}
+
+.validation-container {
+	overflow: hidden;
+	display: flex;
+	gap: 1;
+	justify-content: center;
+	align-items: start;
+	margin-bottom: 18px;
+}
+
+.validation-content {
+	text-align: center;
+	font-size: 12px;
+	display: flex;
+	margin-left: 10px;
+}

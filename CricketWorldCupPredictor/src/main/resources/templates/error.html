@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cricket World Cup Prediction - 2023</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/all-styles.css">
+	<link rel="stylesheet" href="/css/match.css">
+	<link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css">
+	<link rel="icon" href="/images/background-img-remove.png" type="image/x-icon">
+</head>
+
+<body>
+	<header>
+		<h1 class="h1-container">
+			<span class="img-container">
+				<span class="text">Cricket World Cup Prediction - 2023</span>
+				<span>
+					<img th:src="@{/images/background-img.png}" alt="Cricket Prediction">
+				</span>
+			</span>
+		</h1>
+	</header>
+
+
+
+	<br />
+	<br />
+
+
+	<div class="container1">
+		<div class="alert alert-danger">
+			<div class="center"><strong>Oops!</strong> An error occurred while
+				processing your request. <a href="/prediction-form"><Strong>Click here</Strong></a> to access prediction
+				form.</div>
+		</div>
+
+		<div class="img-container">
+			<div>
+				<img th:src="@{/images/background-img-remove.png}" alt="Your Image" class="background-image1">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

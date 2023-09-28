@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cricket World Cup Prediction - 2023</title>
+	<link rel="stylesheet" href="/css/all-styles.css">
+	<link rel="stylesheet" href="/css/prediction.css">
+</head>
+
+<body>
+	<header>
+		<h1 class="h1-container">
+			<span class="img-container">
+				<span class="text">Cricket World Cup Prediction - 2023</span>
+				<span>
+					<img th:src="@{/images/background-img.png}" alt="Cricket Prediction">
+				</span>
+			</span>
+		</h1>
+	</header>
+	<h3>Prediction Form</h3>
+	<div>
+		<form action="/submit" method="post">
+			<div class="email-container">
+				<div class="email-row">
+					<div class="email-label">
+						<label for="username">Select Email Address:</label>
+					</div>
+					<div class="email-input">
+						<input type="text" id="username" name="matchPredictions[0].username" required />@comcast.com
+					</div>
+				</div>
+			</div>
+
+
+			<div class="flex-container">
+				<th:block th:each="matchDetails: ${matchDetailsList}">
+					<div class="match-card">
+						<input type="hidden" th:name="'matchNumber' + ${matchDetails.matchNumber}"
+							th:value="${matchDetails.matchNumber}">
+						<div class="match-number">
+							<span th:text="'ODI ' + ${matchDetails.matchNumber} + ' of 48'"></span>
+						</div>
+						<div class="match-date" th:text="${#dates.format(matchDetails.matchDate, 'dd, MMMM, yyyy')}">
+						</div>
+						<div class="team-radio">
+							<label><input type="radio"
+									th:name="'matchPredictions[' + ${matchDetails.matchNumber} + '].team'"
+									th:value="${matchDetails.team1}" required /> <span th:text="${matchDetails.team1}">
+								</span>
+							</label>
+							<label><input type="radio"
+									th:name="'matchPredictions[' + ${matchDetails.matchNumber} + '].team'"
+									th:value="${matchDetails.team2}" /> <span th:text="${matchDetails.team2}"></span>
+							</label>
+						</div>
+						<div class="motm-select">
+							<div class="select-label">
+								<label th:for="'matchPredictions[' + ${matchDetails.matchNumber} + '].motm'">Man of the
+									Match:</label>
+							</div>
+							<select th:id="'matchPredictions[' + ${matchDetails.matchNumber} + '].motm'"
+								th:name="'matchPredictions[' + ${matchDetails.matchNumber} + '].motm'" required>
+								<option value="">Select</option>
+								<option th:each="option : ${playersMap[matchDetails.team1]}" th:value="${option}"
+									th:text="${option}"></option>
+								<option th:each="option : ${playersMap[matchDetails.team2]}" th:value="${option}"
+									th:text="${option}"></option>
+							</select>
+						</div>
+					</div>
+				</th:block>
+
+				<div class="form-container">
+					<!-- Man of the series -->
+					<div class="form-row">
+						<div class="form-label">
+							<label for="mots">Man of the Series:</label>
+						</div>
+						<select id="mots" name="matchPredictions[0].mots">
+							<option value="">Select</option>
+							<option th:each="option : ${allPlayersList}" th:value="${option}" th:text="${option}">
+							</option>
+						</select>
+					</div>
+
+					<!-- Most number of runs -->
+					<div class="form-row">
+						<div class="form-label">
+							<label for="mnor">Most number of Runs:</label>
+						</div>
+						<select id="mnor" name="matchPredictions[0].mnor">
+							<option value="">Select</option>
+							<option th:each="option : ${allBatsmanList}" th:value="${option}" th:text="${option}">
+							</option>
+						</select>
+					</div>
+
+					<!-- Most number of wickets -->
+					<div class="form-row">
+						<div class="form-label">
+							<label for="mnow">Most number of Wickets:</label>
+						</div>
+						<select id="mnow" name="matchPredictions[0].mnow">
+							<option value="">Select</option>
+							<option th:each="option : ${allBowlersList}" th:value="${option}" th:text="${option}">
+							</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="center-align">
+				<input type="submit" value="Submit">
+			</div>
+
+		</form>
+	</div>
+</body>
+
+</html>
